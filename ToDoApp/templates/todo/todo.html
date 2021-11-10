@@ -1,0 +1,11 @@
+{% block content %}
+<h1>ToDo App</h1>
+<table id="todo_table">
+    {% for i in todo_items %}
+    <tr>
+    <td>ToDo Item {{ i }}:</td>
+    <td><input type="Text" value=""></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

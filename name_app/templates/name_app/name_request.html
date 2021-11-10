@@ -1,0 +1,19 @@
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <h1>Name Request</h1>
+</head>
+<body>
+    <p>Type in a name to get data on that name.</p>
+    <p>You can also type in a state abbreviation to get data specifically from that state. If nothing is typed in, it will just give data for all the states.</p>
+    <form action="/name_data" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+    <p><a href="{% url 'home' %}">Return to Main</a></p>
+</body>
+</html>
+{% endblock content %}

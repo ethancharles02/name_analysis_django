@@ -1,0 +1,32 @@
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Name Data</h1>
+
+    <p>Here is name data for {{ name }}</p>
+
+    {% if total_url != "" %}
+        <p><img
+            src="static/{{total_url}}"
+            alt="Name Graph"
+        ></p>
+    {% else %}
+        <p>No name data found</p>
+    {% endif %}
+    
+    {% if state_url != "" %}
+        <p><img
+            src="static/{{state_url}}"
+            alt="State Name Graph"
+        ></p>
+    {% else %}
+        <p>No state data found</p>
+    {% endif %}
+
+    <p><a href="name_app/name_request.html">Return to Name Request</a></p>
+    
+</body>
+</html>
+{% endblock %}
